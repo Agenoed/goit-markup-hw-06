@@ -111,6 +111,7 @@ p {
 
   width: 528px;
   height: 581px;
+  padding: 40px;
 
   background-color: #ffffff;
 
@@ -150,8 +151,140 @@ p {
   transform: translate(-50%, -50%) rotate(0) scale(0);
   opacity: 0;
 }
+
 /* END Modal window */
 
+/* Register form */
+.register-form {
+  text-align: center;
+}
+
+.register-form-title {
+  display: block;
+  margin-bottom: 12px;
+
+  font-size: 20px;
+  line-height: calc(23 / 20);
+  text-align: center;
+  letter-spacing: 0.03em;
+}
+
+.register-form-group {
+  margin-bottom: 20px;
+}
+
+.register-form-wrap {
+  position: relative;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.register-form-wrap:last-child {
+  margin-bottom: 0;
+}
+
+.register-form-label {
+  display: block;
+  text-align: left;
+  margin-bottom: 4px;
+
+  font-size: 12px;
+  line-height: calc(14 / 12);
+
+  letter-spacing: 0.01em;
+
+  color: var(--secondary-txt-clr);
+}
+
+.register-form-input,
+.register-form-message {
+  width: 100%;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+
+  padding: 10px;
+  padding-left: 50px;
+  border-radius: 4px;
+
+  outline: transparent;
+}
+
+.register-form-message {
+  padding: 12px 16px;
+  height: 120px;
+  resize: none;
+}
+
+.register-form-icon {
+  position: absolute;
+  bottom: 10px;
+  left: 15px;
+}
+
+.register-form-agreement {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 30px;
+}
+
+.register-checkbox:checked + .register-icon .register-icon-uncheck {
+  opacity: 0;
+  transition: opacity var(--anim-fast);
+}
+
+.register-icon-check {
+  opacity: 0;
+  fill: var(--accent-clr);
+  transition: opacity var(--anim-fast);
+}
+
+.register-checkbox:checked + .register-icon .register-icon-check {
+  opacity: 1;
+}
+
+.register-form-agreement-text {
+  font-size: 14px;
+  line-height: calc(24 / 14);
+  user-select: none;
+  text-underline-position: under;
+
+  letter-spacing: 0.03em;
+
+  color: var(--secondary-txt-clr);
+}
+
+.register-form-agreement-link {
+  color: var(--accent-clr);
+}
+
+.register-form-btn {
+  display: inline-flex;
+  align-items: center;
+  text-align: center;
+
+  min-width: 200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px 52px;
+
+  font-weight: 700;
+  font-size: 16px;
+  line-height: calc(30 / 16);
+
+  letter-spacing: 0.06em;
+
+  color: var(--light-txt-clr);
+
+  border: none;
+  background: var(--accent-clr);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+
+  cursor: pointer;
+}
+
+/* END Register form */
 /* =========HEADER========= */
 .header {
   border-bottom: 1px solid #ececec;
@@ -687,6 +820,7 @@ p {
 .footer-distribution-input {
   width: 358px;
   height: 50px;
+  margin-right: 12px;
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 4px;
   outline: transparent;
@@ -697,6 +831,9 @@ p {
 .footer-distribution-input:placeholder-shown {
   padding-left: 16px;
 }
+.footer-distribution-input::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
 .footer-distribution-input:not(:placeholder-shown) {
   border-color: #fff;
 }
@@ -704,7 +841,6 @@ p {
   display: inline-flex;
   gap: 10px;
   padding: 10px 28px;
-  margin-left: 12px;
 
   min-width: 200px;
 
